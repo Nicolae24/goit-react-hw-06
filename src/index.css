@@ -32,7 +32,7 @@ a:hover {
 
 /* Додати до глобального CSS (наприклад, index.css або App.css) */
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -56,13 +56,75 @@ body {
   100% {
     background-position: 0% 50%;
   }
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif; /* космічний шрифт, можна підключити з Google Fonts */
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at center,
+    #000000 0%,
+    #0f0c29 40%,
+    #302b63 70%,
+    #24243e 100%
+  );
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+
+  /* Зоряне небо: безліч точок */
+  background-image: radial-gradient(circle at 20% 30%, #fff, transparent 2px),
+    radial-gradient(circle at 80% 70%, #fff, transparent 3px),
+    radial-gradient(circle at 50% 90%, #ffd700, transparent 1.5px),
+    radial-gradient(circle at 40% 40%, #00ffff, transparent 2px),
+    radial-gradient(circle at 70% 20%, #ff69b4, transparent 2.5px),
+    radial-gradient(circle at 10% 80%, #ffffff, transparent 1px);
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  animation: starTwinkle 10s linear infinite;
 }
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    background-size: 100% 100%;
+    opacity: 1;
+  }
+  50% {
+    background-size: 110% 110%;
+    opacity: 0.8;
+  }
+}
+
+/* Вибір тексту - космічний акцент */
+::selection {
+  background-color: #ff00ff;
+  color: #000;
+}
+
+/* Заголовки */
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff,
+    0 0 40px #00ffff;
+  color: #fff;
+}
+
+/* Стиль для параграфів, кнопок та інпутів можна дописати, якщо хочеш */
 
 * {
   box-sizing: border-box;
 }
 
-h1 {
+/* h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -99,10 +161,10 @@ button:focus-visible {
   }
 }
 
-/* Додатковий ефект: легке світіння для заголовків або кнопок */
+
 h1,
 h2,
 h3,
 button {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
-}
+} */

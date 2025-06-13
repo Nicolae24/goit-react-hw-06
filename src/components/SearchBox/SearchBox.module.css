@@ -1,41 +1,42 @@
-/* SearchBox.module.css */
+.searchBox {
+  margin: 20px auto;
+  max-width: 400px;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  padding: 16px 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px #00ffff, inset 0 0 25px #ff00ff;
+  font-family: "Orbitron", sans-serif;
+  color: #0ff;
+  text-align: center;
+  user-select: none;
+}
 
 .label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333;
-  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
 }
 
 .input {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  display: block;
-  padding: 0.75rem 1rem;
+  padding: 12px 15px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 10px;
+  background: #011627;
+  color: #0ff;
+  box-shadow: 0 0 8px #00ffff inset, 0 0 15px #ff00ff inset;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+  font-family: "Orbitron", sans-serif;
+}
+
+.input::placeholder {
+  color: #44ffffaa;
 }
 
 .input:focus {
-  outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
-}
-
-.searchBox {
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 500px;
-  background-color: #f9fafb;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px #00ffff inset, 0 0 25px #ff00ff inset, 0 0 30px #00ffff;
 }

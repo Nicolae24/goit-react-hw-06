@@ -1,33 +1,11 @@
 import s from "./Contact.module.css";
 import { VscAccount, VscCallIncoming } from "react-icons/vsc";
+import { useDispatch } from "react-redux";
 
-// const Contact = ({ visibleNames, deleteContact }) => {
-//   return (
-//     <>
-//       {visibleNames.map(({ id, name, number }) => (
-//         <li key={id} className={s.contactItem}>
-//           <div className={s.iconColumn}>
-//             <VscAccount className={`${s.contactIcon} ${s.accountIcon}`} />
-//             <VscCallIncoming className={`${s.contactIcon} ${s.callIcon}`} />
-//           </div>
-//           <div className={s.contactInfo}>
-//             <span className={s.contactName}>{name}</span>
-//             <span className={s.contactNumber}>{number}</span>
-//           </div>
-//           <button
-//             className={s.deleteButton}
-//             type="button"
-//             onClick={() => deleteContact(id)}
-//           >
-//             Delete
-//           </button>
-//         </li>
-//       ))}
-//     </>
-//   );
-// };
+import { deleteContact } from "../../../redux/contactsSlice";
 
-const Contact = ({ id, name, number, deleteContact }) => {
+const Contact = ({ id, name, number }) => {
+  const dispatch = useDispatch();
   return (
     <li className={s.contactItem}>
       <div className={s.iconColumn}>
@@ -41,7 +19,8 @@ const Contact = ({ id, name, number, deleteContact }) => {
       <button
         className={s.deleteButton}
         type="button"
-        onClick={() => deleteContact(id)}
+        onClick={() => dispatch(deleteContact(id))}
+        aria-label={`Delete contact ${name}`}
       >
         Delete
       </button>

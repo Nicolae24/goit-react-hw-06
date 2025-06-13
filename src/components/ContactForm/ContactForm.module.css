@@ -1,83 +1,79 @@
-/* ContactForm.module.css */
-
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff, inset 0 0 30px #08f;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .label {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #333333;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  color: #0ff;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
   position: relative;
 }
 
 .input {
-  padding: 0.75rem 1rem;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid #0ff;
+  background: transparent;
+  color: #0ff;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px #0ff;
+  font-family: "Orbitron", sans-serif;
+}
+
+.input::placeholder {
+  color: #66ffffaa;
 }
 
 .input:focus {
-  outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.error {
+  color: #ff3366;
+  font-weight: 700;
+  margin-top: 5px;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 5px #ff3366;
+  position: absolute;
+  bottom: -45px;
+  left: 5%;
 }
 
 .addContact {
-  margin-top: 25px;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: #4f46e5;
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 15px;
   border: none;
-  border-radius: 0.5rem;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: #000;
+  font-weight: 900;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff,
+    inset 0 0 40px #00ffff;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
-.addContact:hover {
-  background-color: #4338ca;
-  transform: translateY(-2px);
-}
-
-.addContact:active {
-  background-color: #3730a3;
-  transform: translateY(0);
-}
-
-/* .error {
-  color: red;
-  font-size: 0.9rem;
-
-  margin-bottom: 50px;
-  font-weight: 600;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-.error {
-  position: absolute;
-  bottom: -32px; /* розташування ПІД інпутом */
-  left: 5%;
-
-  color: red;
-  font-size: 0.85rem;
-  font-weight: 600;
-  line-height: 1.2rem;
+.addContact:hover,
+.addContact:focus {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #ff00ff, 0 0 40px #00ffff,
+    inset 0 0 50px #ff00ff;
+  color: #fff;
 }

@@ -1,0 +1,88 @@
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.contactItem:hover {
+  transform: translateY(-2px);
+  background-color: #f3f4f6;
+}
+
+.contactName {
+  font-weight: 600;
+  color: #111827;
+  flex: 1;
+}
+
+.contactNumber {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.deleteButton {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ef4444;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #dc2626;
+}
+
+/* .contactIcon {
+  font-size: 1.25rem;
+  color: #6b7280; 
+  margin-right: 0.75rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contactItem:hover .contactIcon {
+  color: #4f46e5; 
+  transform: scale(1.1);
+} */
+
+.iconColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.accountIcon {
+  color: #3b82f6;
+}
+
+.callIcon {
+  color: #10b981;
+}
+
+.contactItem:hover .contactIcon {
+  transform: scale(1.2);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
